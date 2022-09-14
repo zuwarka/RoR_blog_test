@@ -78,7 +78,7 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
-  # logging with log model
+
   def write_to_log
     log = Log.new(
       remote_ip: request.remote_ip,
