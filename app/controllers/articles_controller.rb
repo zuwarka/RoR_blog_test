@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[edit update show destroy]
   around_action :write_to_log
+  before_action :authenticate_user!
 
   def new
     @article = Article.new
